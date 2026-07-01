@@ -1,0 +1,54 @@
+version: "3.9"
+
+services:
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "5173:5173"
+    environment:
+      - VITE_API_URL=http://backend:8000
+    depends_on:
+      - backend
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY}
+      - JUDGE0_URL=http://judge0:2358
+      - DATABASE_URL=sqlite:///./codementor.db
+    volumes:
+      - ./backend:/app
+    depends_on:
+      - judge0
+
+  judge0:
+    image: judge0/judge0:1.13.0
+    ports:
+      - "2358:2358"
+    environment:
+      - REDIS_HOST=redis
+    depends_on:
+      - redis
+      - judge0-workers
+
+  judge0-workers:
+    image: judge0/judge0:1.13.0
+    command: ["./scripts/workers"]
+    environment:
+      - REDIS_HOST=redis
+    depends_on:
+      - redis
+
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
