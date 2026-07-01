@@ -1,3 +1,4 @@
+# CodeMentor-AI
 # CodeMentor AI — Personalized GenAI Coding Tutor
 
 IEEE TechForGood 2026 | Group 031
