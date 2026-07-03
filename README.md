@@ -68,3 +68,10 @@ docker-compose up --build
 - Code execution via Judge0 (20+ languages)
 - Persistent learning history with SQLite
 - Real-time feedback with error pattern tracking
+
+## 🚀 Live Demo
+
+**Backend API:** - https://codementor-ai-k87r.onrender.com
+
+**API Documentation (Swagger UI):**
+https://codementor-ai-k87r.onrender.com
