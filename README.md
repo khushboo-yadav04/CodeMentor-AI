@@ -69,7 +69,7 @@ docker-compose up --build
 - Persistent learning history with SQLite
 - Real-time feedback with error pattern tracking
 
-## 🚀 Live Demo
+## 🚀 Live Demo (Backend)
 
 **Backend API:** - https://codementor-ai-k87r.onrender.com
 
