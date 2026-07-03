@@ -75,3 +75,5 @@ docker-compose up --build
 
 **API Documentation (Swagger UI):**
 https://codementor-ai-k87r.onrender.com
+
+ **Note:** The backend is hosted on Render's free tier and may take up to a minute to respond after periods of inactivity.
