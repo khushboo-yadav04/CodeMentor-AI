@@ -2,7 +2,6 @@
 # CodeMentor AI — Personalized GenAI Coding Tutor
 
 ## Project Structure
-
 ```
 codementor-ai/
 ├── frontend/          # React + Vite + Monaco Editor
