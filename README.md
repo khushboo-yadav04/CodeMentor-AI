@@ -1,4 +1,3 @@
-# CodeMentor-AI
 # CodeMentor AI — Personalized GenAI Coding Tutor
 
 ## Project Structure
